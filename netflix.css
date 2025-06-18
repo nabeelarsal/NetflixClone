@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(header-image.png);
+    background-size: cover;
+    background-position: center;
+    padding: 30px 8%;
+    position: relative;
+}
+
+/* NAV */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+nav button {
+    border: none;
+    outline: none;
+    background-color: #db0001;
+    color: white;
+    padding: 7px 20px;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-size: 0.9rem;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid white;
+    padding: 7px 10px;
+    font-size: 0.9rem;
+}
+
+.lang-btn i{
+    width: 10px;
+    margin-right: 10px;
+
+}
+.lang-btn img{
+    width: 18px;
+}
+
+/* HEADER-CONTENT */
+
+.header-content {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 3.75rem;
+    font-weight: 600;
+    line-height: 70px;
+    max-width: 650px;
+}
+
+.header-content h3 {
+    font-weight: 400px;
+    margin-bottom: 20px;
+}
+
+.email-signup {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.email-signup input {
+    outline: none;
+    border: none;
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.email-signup button {
+    outline: none;
+    border: none;
+    padding: 15px 30px;
+    background-color: #db0001;
+    color: white;
+    font-size: 1rem;
+}
+
+/* POSTER */
+
+.poster-section {
+    padding: 50px 10%;
+    font-size: 1.4rem;
+}
+
+.post {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    width: 100%;
+}
+
+.text-area, .img-area {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-area img {
+    display: block;
+    width: 90%;
+    /* padding: 20px; */
+}
+
+.poster-section h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* FAQ */
+
+.faq {
+    padding: 50px 15% 10px;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.faq .list {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.faq .list li {
+    list-style: none;
+    padding: 5px;
+}
+
+.faq label{
+    display: flex;
+    align-items: center;
+    background-color: #303030;
+    padding: 20px;
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label::after {
+    content: "+";
+    font-size: 2rem;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.faq .content {
+    background-color: #303030;
+    text-align: left;
+    padding: 0 20px;
+    font-size: 1.2rem;
+    overflow: hidden;
+    max-height: 0;
+    transform: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq input[type="radio"]:checked + label + .content {
+    max-height: 650px;
+    padding: 30px 20px;
+}
+
+.faq input[type="radio"]:checked + label::after {
+    transform: rotate(135deg);
+}
+
+.faq small {
+    font-size: 0.9rem;
+}
+
+.email-signup{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 50px 12%;
+    border-top: 10px solid #333;
+    color: #777;
+}
+
+footer h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+footer .line {
+    display: flex;
+    align-items: flex-start;
+}
+
+footer .items {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+}
+
+footer a {
+    display: block;
+    text-decoration: none;
+    color: #777;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+footer .lang-btn {
+    color: white;
+    border-radius: 4px;
+    padding: 10px 15px;
+}
+
+.netflixpakistan {
+    margin: 20px 0px;
+}
+
+@media only screen and (max-width: 600px) {
+    .logo {
+        width: 100px;
+    }
+    nav button {
+        padding: 5px 10px;     
+    }
+    .lang-btn {
+        padding: 4px 8px;
+    }
+
+    /* header-content */
+
+    .header-content {
+        position: unset;
+        transform: none;
+        margin-top: 200px;
+    }
+    .header-content h1 {
+        font-size: 2rem;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+    .header-content button{
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    /* poster */
+
+    .poster-section h2{
+        font-size: 2rem;
+        
+    }
+    .poster-section p{
+        font-size: 1rem;
+        
+    }
+    .text-area, .img-area {
+        flex-basis: 100%;
+    }
+    .poster-section .post {
+        padding: 10px 0;
+    }
+    .post:nth-child(2), .post:nth-child(4) {
+        flex-direction: column-reverse;
+    }
+
+    /* FAQ */
+
+    .faq h2 {
+        font-size: 1.5rem;
+    }
+    .faq label {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+    .list .content {
+        font-size: 0.9rem;
+        
+    }
+    .faq label::after {
+        font-size: 1.3rem;
+    }
+
+    /* footer */
+
+    footer h2 {
+        font-size: 1.4rem;
+    }
+
+}
